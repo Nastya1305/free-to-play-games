@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/free-to-play-games/static/css/main.31d6cfe0.css",
+    "main.js": "/free-to-play-games/static/js/main.71ba1d21.js",
+    "index.html": "/free-to-play-games/index.html",
+    "main.71ba1d21.js.map": "/free-to-play-games/static/js/main.71ba1d21.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.71ba1d21.js"
+  ]
+}
