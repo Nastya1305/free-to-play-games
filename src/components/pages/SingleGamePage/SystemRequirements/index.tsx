@@ -11,7 +11,7 @@ interface SystemRequirmentsProps {
 const SystemRequirments: FC<SystemRequirmentsProps> = ({ systemRequirements }) => {
    return (
       <Descriptions size="small" title="Minimum System Requirements" layout="vertical"
-         column={{ md: 12, lg: 6 }} bordered
+         column={{ xs: 2, lg: 5 }} bordered
          items={[
             { key: '1', label: 'OS', children: systemRequirements.os },
             { key: '2', label: 'Memory', children: systemRequirements.memory },

@@ -8,7 +8,7 @@ const Layout: FC = () => {
    return (
       <div className="container">
          <AntLayout >
-            <AntLayout.Content style={{ padding: '50px 0' }}>
+            <AntLayout.Content style={{ padding: '50px 20px' }}>
                <Outlet />
             </AntLayout.Content>
          </AntLayout>

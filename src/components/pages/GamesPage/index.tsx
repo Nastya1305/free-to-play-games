@@ -28,16 +28,12 @@ const GamesPage: FC = () => {
             </Col>
          </Row>
          <Divider />
-         <Row>
-            <Col span={24}>
-               <Spin size="large" spinning={isLoading} tip="Loading">
-                  {
-                     error ? <Alert message={error} type="error" showIcon />
-                        : <GamesList games={games} />
-                  }
-               </Spin>
-            </Col>
-         </Row>
+         <Spin size="large" spinning={isLoading} tip="Loading">
+            {
+               error ? <Alert message={error} type="error" showIcon />
+                  : <GamesList games={games} />
+            }
+         </Spin>
          <BackToTopBtn />
       </>
    )

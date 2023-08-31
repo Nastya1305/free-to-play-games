@@ -18,11 +18,11 @@ const GamesList: FC<GamesListProps> = ({ games }) => {
    }
 
    return (
-      <Space direction="vertical" align="center" size={50}>
+      <Space direction="vertical" align="center" size={50} style={{ maxWidth: '100%' }}>
          <Row gutter={[{ xs: 8, sm: 16, md: 24, lg: 32 }, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
             {
                games.slice(0, page * gamesPerPage.current).map(game =>
-                  <Col xl={6} lg={8} md={12} key={game.id}>
+                  <Col xl={6} lg={8} md={12} sm={24} key={game.id}>
                      <GameCard game={game} />
                   </Col>
                )
