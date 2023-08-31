@@ -3,24 +3,24 @@ export interface IGame {
    id: number,
    title: string,
    thumbnail: string,
-   short_description: string,
-   game_url: string,
+   shortDescription: string,
+   gameUrl: string,
    genre: string,
    platform: string,
    publisher: string,
    developer: string,
-   release_date: Date,
-   freetogame_profile_url: string
+   releaseDate: string,
+   freetogameProfileUrl: string
 }
 
 export interface IGameDetails extends IGame {
    status: string,
    description: string,
    screenshots: Array<{ id: number, image: string }>,
-   minimum_system_requirements: SystemRequirements
+   minimumSystemRequirements?: SystemRequirements
 }
 
-interface SystemRequirements {
+export interface SystemRequirements {
    os: string,
    processor: string,
    memory: string,
@@ -31,7 +31,7 @@ interface SystemRequirements {
 
 export interface GameState {
    games: IGame[],
-   gameDetails: IGame | null,
+   gameDetails: IGameDetails | null,
    isLoading: boolean,
    error: string
 }

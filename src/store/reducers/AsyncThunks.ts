@@ -5,24 +5,26 @@ import { FilterState } from "models/filter";
 import { IGame, IGameDetails } from "models/game";
 
 
-
 const headers = {
    'X-RapidAPI-Key': process.env.REACT_APP_API_KEY,
    'X-RapidAPI-Host': process.env.REACT_APP_API_HOST
-}
+};
+
 
 
 function getDataLoadErrorMessage(error: unknown): string {
    let errorMessage = 'Loading error.';
 
    if (axios.isAxiosError(error)) {
-      errorMessage += ' ' + (error.response?.data.message || error.response?.data.status_message);
+      errorMessage += ' ' +
+         (error.response?.data.message ||
+            error.response?.data.status_message ||
+            error.message);
    } else if (error instanceof Error) {
       errorMessage += ' ' + error.message;
    }
    return errorMessage;
 }
-
 
 
 export const fetchGames = createAsyncThunk(

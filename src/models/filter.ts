@@ -1,15 +1,73 @@
 
+type ValueOf<T> = T[keyof T];
 
-export type SortBy = 'release-date' | 'popularity' | 'alphabetical' | 'relevance';
 
-export type Platform = 'pc' | 'browser' | 'all';
+export const SortBy = {
+   RELEASE_DAY: 'release-date',
+   POPULARITY: 'popularity',
+   ALPHABETICAL: 'alphabetical',
+   RELEVANCE: 'relevance'
+};
+export type SortBy = ValueOf<typeof SortBy>;
 
-export type Category = 'mmorpg' | 'shooter' | 'strategy' | 'moba' | 'racing' | 'sports' | 'social' |
-   'sandbox' | 'open-world' | 'survival' | 'pvp' | 'pve' | 'pixel' | 'voxel' | 'zombie' | 'turn-based' |
-   'first-person' | 'third-Person' | 'top-down' | 'tank' | 'space' | 'sailing' | 'side-scroller' |
-   'superhero' | 'permadeath' | 'card' | 'battle-royale' | 'mmo' | 'mmofps' | 'mmotps' | '3d' | '2d' |
-   'anime' | 'fantasy' | 'sci-fi' | 'fighting' | 'action-rpg' | 'action' | 'military' | 'martial-arts' |
-   'flight' | 'low-spec' | 'tower-defense' | 'horror' | 'mmorts';
+
+export const Platform = {
+   PC: 'pc',
+   BROWSER: 'browser',
+   ALL: 'all'
+};
+export type Platform = ValueOf<typeof Platform>;
+
+
+export const Category = {
+   MMORPG: 'mmorpg',
+   SHOOTER: 'shooter',
+   STRATEGY: 'strategy',
+   MOBA: 'moba',
+   RACING: 'racing',
+   SPORTS: 'sports',
+   SOCIAL: 'social',
+   SANDBOX: 'sandbox',
+   OPEN_WORLD: 'open-world',
+   SURVIVAL: 'survival',
+   PVP: 'pvp',
+   PVE: 'pve',
+   PIXEL: 'pixel',
+   VOXEL: 'voxel',
+   ZOMBIE: 'zombie',
+   TURN_BASED: 'turn-based',
+   FIRST_PERSON: 'first-person',
+   THIRD_PERSON: 'third-Person',
+   TOP_DOWN: 'top-down',
+   TANK: 'tank',
+   SPACE: 'space',
+   SAILING: 'sailing',
+   SIDE_SCROLLER: 'side-scroller',
+   SUPERHERO: 'superhero',
+   PERMADEATH: 'permadeath',
+   CARD: 'card',
+   BATTLE_ROYALE: 'battle-royale',
+   MMO: 'mmo',
+   MMOFPS: 'mmofps',
+   MMOTPS: 'mmotps',
+   _3D: '3d',
+   _2D: '2d',
+   ANIME: 'anime',
+   FANTASY: 'fantasy',
+   SCI_FI: 'sci-fi',
+   FIGHTING: 'fighting',
+   ACTION_RPG: 'action-rpg',
+   ACTION: 'action',
+   MILITARY: 'military',
+   MARTIAL_ARTS: 'martial-arts',
+   FLIGHT: 'flight',
+   LOW_SPEC: 'low-spec',
+   TOWER_DEFENSE: 'tower-defense',
+   HORROR: 'horror',
+   MMORTS: 'mmorts',
+};
+export type Category = ValueOf<typeof Category>;
+
 
 
 export interface FilterState {

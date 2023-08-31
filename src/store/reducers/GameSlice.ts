@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
-import { fetchGameDetails, fetchGames } from "./ActionCreators";
+import { fetchGameDetails, fetchGames } from "./AsyncThunks";
 import { GameState, IGame, IGameDetails } from "models/game";
 
 
@@ -13,7 +13,11 @@ const initialState: GameState = {
 export const gameSlice = createSlice({
    name: 'game',
    initialState,
-   reducers: {},
+   reducers: {
+      setGameDetails(state, action: PayloadAction<IGameDetails>) {
+         state.gameDetails = action.payload;
+      },
+   },
    extraReducers: {
       [fetchGames.fulfilled.type]: (state, action: PayloadAction<IGame[]>) => {
          state.isLoading = false;
