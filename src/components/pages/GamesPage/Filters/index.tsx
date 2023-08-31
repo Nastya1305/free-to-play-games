@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import { useAppDispatch } from "hooks/redux";
+import { useAppDispatch, useAppSelector } from "hooks/redux";
 import { filterSlice } from "store/reducers/FilterSlice";
 
 import { Space } from "antd";
@@ -12,13 +12,14 @@ import SortSelect from "../SortSelect";
 
 const Filters: FC = () => {
    const { setCategory, setPlatform, setSort } = filterSlice.actions;
+   const filter = useAppSelector(state => state.filterReducer);
    const dispatch = useAppDispatch();
 
    return (
       <Space size={24} wrap>
-         <GenreSelect onChange={value => dispatch(setCategory(value))} />
-         <PlatformSelect onChange={value => dispatch(setPlatform(value))} />
-         <SortSelect onChange={value => dispatch(setSort(value))} />
+         <GenreSelect value={filter.category} onChange={value => dispatch(setCategory(value))} />
+         <PlatformSelect value={filter.platform} onChange={value => dispatch(setPlatform(value))} />
+         <SortSelect value={filter["sort-by"]} onChange={value => dispatch(setSort(value))} />
       </Space>
    )
 }

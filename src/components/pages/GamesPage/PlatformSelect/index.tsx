@@ -3,16 +3,18 @@ import { FC } from "react";
 import { Platform } from "models/filter";
 
 interface PlatformSelectProps {
+   value: string | null,
    onChange(value: string): void
 }
 
 
-const PlatformSelect: FC<PlatformSelectProps> = ({ onChange }) => {
+const PlatformSelect: FC<PlatformSelectProps> = ({ value, onChange }) => {
 
    return (
       <Space>
          <label>Platform:</label>
          <Select
+            value={value}
             placeholder="Select a platform"
             style={{ width: 150 }}
             onChange={onChange}

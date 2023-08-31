@@ -4,15 +4,17 @@ import { Category } from "models/filter";
 
 
 interface GenreSelectProps {
+   value: string | null,
    onChange(value: string): void
 }
 
 
-const GenreSelect: FC<GenreSelectProps> = ({ onChange }) => {
+const GenreSelect: FC<GenreSelectProps> = ({ value, onChange }) => {
    return (
       <Space>
          <label>Genre:</label>
          <Select
+            value={value}
             showSearch
             placeholder="Select a genre"
             style={{ width: 150 }}
