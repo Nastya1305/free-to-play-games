@@ -26,6 +26,7 @@ export const gameSlice = createSlice({
       },
       [fetchGames.pending.type]: (state) => {
          state.isLoading = true;
+         state.games = [];
       },
       [fetchGames.rejected.type]: (state, action: PayloadAction<string>) => {
          state.isLoading = false;
@@ -38,6 +39,7 @@ export const gameSlice = createSlice({
       },
       [fetchGameDetails.pending.type]: (state) => {
          state.isLoading = true;
+         state.gameDetails = null;
       },
       [fetchGameDetails.rejected.type]: (state, action: PayloadAction<string>) => {
          state.isLoading = false;
