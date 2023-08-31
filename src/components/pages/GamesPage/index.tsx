@@ -5,6 +5,7 @@ import { fetchGames } from "store/reducers/AsyncThunks";
 import { Alert, Col, Divider, Row, Spin } from "antd";
 import Filters from "./Filters";
 import GamesList from "./GameList";
+import BackToTopBtn from "./BackToTopBtn";
 
 
 
@@ -37,6 +38,7 @@ const GamesPage: FC = () => {
                </Spin>
             </Col>
          </Row>
+         <BackToTopBtn />
       </>
    )
 }
