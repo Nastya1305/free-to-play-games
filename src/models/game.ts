@@ -3,21 +3,21 @@ export interface IGame {
    id: number,
    title: string,
    thumbnail: string,
-   shortDescription: string,
-   gameUrl: string,
+   short_description: string,
+   game_url: string,
    genre: string,
    platform: string,
    publisher: string,
    developer: string,
    releaseDate: string,
-   freetogameProfileUrl: string
+   freetogame_profile_url: string
 }
 
 export interface IGameDetails extends IGame {
    status: string,
    description: string,
    screenshots: Array<{ id: number, image: string }>,
-   minimumSystemRequirements?: SystemRequirements
+   minimum_system_requirements?: SystemRequirements
 }
 
 export interface SystemRequirements {

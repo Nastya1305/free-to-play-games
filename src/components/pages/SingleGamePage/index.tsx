@@ -57,7 +57,7 @@ const SingleGamePage: FC = () => {
                                  </Button>
                               </Link>
                               <Button type="primary"
-                                 href={gameDetails.gameUrl} target="_blank"
+                                 href={gameDetails.game_url} target="_blank"
                                  icon={<ArrowRightOutlined />}
                               >
                                  PLAY NOW
@@ -73,8 +73,8 @@ const SingleGamePage: FC = () => {
                            <AboutGame gameDetails={gameDetails} />
                            <Divider />
                            {
-                              gameDetails.minimumSystemRequirements &&
-                              <SystemRequirments systemRequirements={gameDetails.minimumSystemRequirements} />
+                              gameDetails.minimum_system_requirements &&
+                              <SystemRequirments systemRequirements={gameDetails.minimum_system_requirements} />
                            }
                         </Space>
                      </Col>
