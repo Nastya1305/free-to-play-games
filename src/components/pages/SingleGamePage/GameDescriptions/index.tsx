@@ -17,7 +17,7 @@ const GameDescriptions: FC<GameDescriptionsProps> = ({ game }) => {
             { key: '2', label: 'Platform', children: game.platform },
             { key: '3', label: 'Publisher', children: game.publisher },
             { key: '4', label: 'Developer', children: game.developer },
-            { key: '5', label: 'Release date', children: formatDate(game.releaseDate) }
+            { key: '5', label: 'Release date', children: formatDate(game.release_date) }
          ]}
       />
    )

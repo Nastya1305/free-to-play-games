@@ -27,7 +27,7 @@ const GameCard: FC<GameCardProps> = ({ game }) => {
                      <Descriptions size="small" column={1}
                         items={[
                            { key: '1', label: 'Publisher', children: game.publisher },
-                           { key: '2', label: 'Release date', children: formatDate(game.releaseDate) }
+                           { key: '2', label: 'Release date', children: formatDate(game.release_date) }
                         ]}
                      />
 
