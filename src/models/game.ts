@@ -9,7 +9,7 @@ export interface IGame {
    platform: string,
    publisher: string,
    developer: string,
-   releaseDate: string,
+   release_date: string,
    freetogame_profile_url: string
 }
 
